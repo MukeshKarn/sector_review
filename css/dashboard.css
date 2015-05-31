@@ -1,11 +1,20 @@
-
+/*
 .container-fluid{
-margin-right:auto;
-margin-left:auto;
-margin-top:0px;
-padding-top:15px;
-padding-left:15px;
-padding-right:15px}
+                margin-right:auto;
+                margin-left:auto;
+                margin-top:0px;
+                padding-top:15px;
+                padding-left:15px;
+                padding-right:15px
+                }
+ */
+.container-fluid{
+                margin-top: 10px;
+                margin-bottom: 10px;
+                border: 0;
+                border-top: 1px solid #eee;
+                }
+
 
 /*
  * Override dc.js default styles for selection
@@ -68,13 +77,13 @@ z-index: 99999999;
 /* unvisited link */
 a:link {
     color: #ffffff;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* visited link */
 a:visited {
     color: #ffffff;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* mouse over link */
