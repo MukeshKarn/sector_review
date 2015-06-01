@@ -8,8 +8,8 @@
         <meta content="UNHCR Information management" name="author" />
         <meta content="Refugee Response in Jordan" property="og:title" />
         <meta content="article" property="og:type" />
-        <meta content="http://data.unhcr.org/jordan/response/Protection" property="og:url" />
-        <meta content="http://data.unhcr.org/jordan/images/Protectiondashboard.jpg" property="og:image" />
+        <meta content="http://data.unhcr.org/jordan//sectors/2015/basicneeds" property="og:url" />
+        <meta content="http://data.unhcr.org/jordan/sectors/basicneeds.jpg" property="og:image" />
         <meta content="Syrian Refugee Response in Jordan" property="og:site_name" />
         <meta content="Syrian Refugee Response in Jordan" property="og:description" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -38,7 +38,7 @@
     <body>
      <!-- Loading screen -->
         <div class="loader"></div>
-        <div class="container-fluid" id="dashboard">
+        <div id="dashboard">
 
                 <!--    Color code for dashboard
                         '#c00000', /* Education */
@@ -108,148 +108,155 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="row" >
-                        <ul class="nav nav-tabs">
+                <ul class="nav nav-tabs">
+                            <!-- Sector overview html  -->
                           <li class="active"><a href="#Overview" data-toggle="tab" aria-expanded="false">Sector Overview</a></li>
-                          <li class=""><a href="#PerIndicator" data-toggle="tab" aria-expanded="true">View Per Indicator</a></li>
-                        </ul>            
-            </div>
-            <div class="row" >
-                <div class="tab-pane fade active in" id="Overview">
-                    <div class="row">
-                        <div class="col-md-3">
+                            <!-- Indicator view html-->
+                          <li class=""><a href="index1.html" data-toggle="tab" aria-expanded="true">View Per Indicator</a></li>
+                          
+                </ul>
+                <div id="myTabContent" class="tab-content">
+
+                <!-- Sector overview html -->
+                    <div class="tab-pane fade active in" id="Overview">
                             <div class="row">
-                                <center>
-                                    <div class="dc-chart" data-intro="Click on this row chart to filter by Activity." data-position="right" data-step="1" id="obj">
+                                <div class="col-md-3">
+                                    <div class="row">
                                         <center>
-                                            <h5><strong>Output</strong><br ><small># of reports</small></h5>
+                                            <div class="dc-chart" data-intro="Click on this row chart to filter by Activity." data-position="right" data-step="1" id="obj">
+                                                <center>
+                                                    <h5><strong>Output</strong><br ><small># of reports</small></h5>
+                                                </center>
+                                            </div>
                                         </center>
                                     </div>
-                                </center>
-                            </div>
-                            <div class="row">
-                                <center>
-                                    <div class="dc-chart" data-intro="Click on this row chart to filter by Indicator." data-position="right" data-step="1" id="indicator">
+                                    <div class="row">
                                         <center>
-                                            <h5><strong>Indicator</strong><br ><small># of assistance instance</small></h5>
+                                            <div class="dc-chart" data-intro="Click on this row chart to filter by Indicator." data-position="right" data-step="1" id="indicator">
+                                                <center>
+                                                    <h5><strong>Indicator</strong><br ><small># of assistance instance</small></h5>
+                                                </center>
+                                            </div>
                                         </center>
                                     </div>
-                                </center>
-                            </div>
-                            <div class="row">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <center>
+                                                <div class="dc-chart" data-intro="Click on this pie chart to filter by Population Cohort." data-position="right" data-step="2" id="gender">
+                                                    <center>
+                                                        <h5><strong>Age Group & Gender</strong><br ><small># of assistance instance</small></h5>
+                                                    </center>
+                                                </div>
+                                            </center>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <center>
+                                                <div class="dc-chart" data-intro="Click on this pie chart to filter by Population Cohort." data-position="right" data-step="2" id="poptype">
+                                                    <center>
+                                                        <h5><strong>Population Type</strong><br ><small># of assistance instance</small></h5>
+                                                    </center>
+                                                </div>
+                                            </center>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <center>
+                                            <div class="dc-chart" data-intro="Click on this row chart to filter by RRP6 status of the report." data-position="right" data-step="4" id="appeal">
+                                                <center>
+                                                    <h5><strong>Inter Agency Appeal</strong><br ><small># of assistance instance</small></h5>
+                                                </center>
+                                            </div>
+                                        </center>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="row">
+                                        <center>
+                                            <div class="dc-chart" data-intro="Click on this row chart to filter by Partner." data-position="right" data-step="5" id="partner">
+                                                <center>
+                                                    <h5><strong>Partner</strong><br ><small># of HHs assisted</small></h5>
+                                                </center>
+                                            </div>
+                                        </center>
+                                    </div>
+                                    <div class="row">
+                                        <center>
+                                            <div class="dc-chart" data-intro="Click on this row chart to filter by Site Type." data-position="right" data-step="6" id="allocation">
+                                                <center>
+                                                    <h5><strong>Allocation according to Initial Plan</strong><br ><small># of assistance instance</small></h5>
+                                                </center>
+                                            </div>
+                                        </center>
+                                    </div>
+                                </div>
                                 <div class="col-md-6">
-                                    <center>
-                                        <div class="dc-chart" data-intro="Click on this pie chart to filter by Population Cohort." data-position="right" data-step="2" id="gender">
+                                    <div class="row">
+                                        <div class="col-md-6" >
                                             <center>
-                                                <h5><strong>Age Group & Gender</strong><br ><small># of assistance instance</small></h5>
+                                                <div class="dc-chart" data-intro="Click on this pie chart to filter by Funding Agency." data-position="right" data-step="3" id="funded">
+                                                    <center>
+                                                        <h5><strong>Funding Agency</strong><br ><small># of assistance instance</small></h5>
+                                                    </center>
+                                                </div>
+                                                <div class="dc-chart" data-intro="Click on this pie chart to filter by Funding Agency." data-position="right" data-step="10" id="location">
+                                                    <center>
+                                                        <h5><strong>Top Locations </strong> <br> <small>Camps locations are not aggregated within Governorate</small></h5>
+                                                    </center>
+                                                </div>
+                                                <div class="dc-chart" data-intro="Click on this pie chart to filter by Funding Agency." data-position="right" data-step="11" id="obj">
+                                                </div>
                                             </center>
                                         </div>
-                                    </center>
-                                </div>
-                                <div class="col-md-6">
-                                    <center>
-                                        <div class="dc-chart" data-intro="Click on this pie chart to filter by Population Cohort." data-position="right" data-step="2" id="poptype">
+                                        <div class="col-md-6"
+                                        data-intro="Click anywhere on the map to filter the results. The camp icon filters activities for camp only and the small jordan map filters country-wide activities" data-position="left" data-step="8" >
+                                            <div id="region">
+                                                <h5><strong>Governorates</strong><br >
+                                                <small>Some activities are country-wide or for camps only.</small></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
                                             <center>
-                                                <h5><strong>Population Type</strong><br ><small># of assistance instance</small></h5>
+                                                <h5><strong>Monthly Progress</strong><br ><small># of assistance instance</small></h5>
                                             </center>
-                                        </div>
-                                    </center>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <center>
-                                    <div class="dc-chart" data-intro="Click on this row chart to filter by RRP6 status of the report." data-position="right" data-step="4" id="appeal">
-                                        <center>
-                                            <h5><strong>Inter Agency Appeal</strong><br ><small># of assistance instance</small></h5>
-                                        </center>
-                                    </div>
-                                </center>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="row">
-                                <center>
-                                    <div class="dc-chart" data-intro="Click on this row chart to filter by Partner." data-position="right" data-step="5" id="partner">
-                                        <center>
-                                            <h5><strong>Partner</strong><br ><small># of HHs assisted</small></h5>
-                                        </center>
-                                    </div>
-                                </center>
-                            </div>
-                            <div class="row">
-                                <center>
-                                    <div class="dc-chart" data-intro="Click on this row chart to filter by Site Type." data-position="right" data-step="6" id="allocation">
-                                        <center>
-                                            <h5><strong>Allocation according to Initial Plan</strong><br ><small># of assistance instance</small></h5>
-                                        </center>
-                                    </div>
-                                </center>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="row">
-                                <div class="col-md-6" >
-                                    <center>
-                                        <div class="dc-chart" data-intro="Click on this pie chart to filter by Funding Agency." data-position="right" data-step="3" id="funded">
-                                            <center>
-                                                <h5><strong>Funding Agency</strong><br ><small># of assistance instance</small></h5>
-                                            </center>
-                                        </div>
-                                        <div class="dc-chart" data-intro="Click on this pie chart to filter by Funding Agency." data-position="right" data-step="10" id="location">
-                                            <center>
-                                                <h5><strong>Top Locations </strong> <br> <small>Camps locations are not aggregated within Governorate</small></h5>
-                                            </center>
-                                        </div>
-                                        <div class="dc-chart" data-intro="Click on this pie chart to filter by Funding Agency." data-position="right" data-step="11" id="obj">
-                                        </div>
-                                    </center>
-                                </div>
-                                <div class="col-md-6"
-                                data-intro="Click anywhere on the map to filter the results. The camp icon filters activities for camp only and the small jordan map filters country-wide activities" data-position="left" data-step="8" >
-                                    <div id="region">
-                                        <h5><strong>Governorates</strong><br >
-                                        <small>Some activities are country-wide or for camps only.</small></h5>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                    <center>
-                                        <h5><strong>Monthly Progress</strong><br ><small># of assistance instance</small></h5>
-                                    </center>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <script type="text/javascript">
-                                    var d = new Date();
-                                    var n = d.getMonth();
-                                        for(count = 0; count < n; count++){
-                                        document.write('<a id="reset" class="reset btn btn-primary btn-sm" href="javascript:dc.filterAll(); monthrange_chart.filter([new Date(2015,' + count + ', 1), new Date(2015, ' + count + ', 31)]); dc.redrawAll();">');
-                                        document.write(monthNames[count] + "</a> &nbsp;");
-                                        }
-                            </script>
-                            <br>
-                                <div class="col-md-12 dc-chart" data-intro="Click on this line chart to zoom in to specific Month." data-position="left" data-step="9" id="month">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <script type="text/javascript">
+                                            var d = new Date();
+                                            var n = d.getMonth();
+                                                for(count = 0; count < n; count++){
+                                                document.write('<a id="reset" class="reset btn btn-primary btn-sm" href="javascript:dc.filterAll(); monthrange_chart.filter([new Date(2015,' + count + ', 1), new Date(2015, ' + count + ', 31)]); dc.redrawAll();">');
+                                                document.write(monthNames[count] + "</a> &nbsp;");
+                                                }
+                                    </script>
+                                    <br>
+                                        <div class="col-md-12 dc-chart" data-intro="Click on this line chart to zoom in to specific Month." data-position="left" data-step="9" id="month">
 
 
 
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 dc-chart" data-intro="Click on this bar chart to filter by Range of Month(s)." data-position="left" data-step="10" id="monthrange">
+                                            <center>
+                                                <h5><strong>Select Month Range Here</strong></h5>
+                                            </center>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12 dc-chart" data-intro="Click on this bar chart to filter by Range of Month(s)." data-position="left" data-step="10" id="monthrange">
-                                    <center>
-                                        <h5><strong>Select Month Range Here</strong></h5>
-                                    </center>
+                            <div class="row" >
+                                <div class="col-md-12">
+                                    <p><h2> &nbsp; </h2></p>
                                 </div>
                             </div>
                         </div>
+                        <div class="tab-pane fade" id="PerIndicator">
+                            <p>This is the sector overview</p>
+                         </div>
                     </div>
-                    <div class="row" >
-                        <div class="col-md-12">
-                            <p><h2> &nbsp; </h2></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="PerIndicator">
-                    <p>This is the sector overview</p>
-                 </div>
             </div>
             <div class="row" id="timelineid"style="background-color: #58595b; color: #ffffff">
                 <div class="col-md-12">
