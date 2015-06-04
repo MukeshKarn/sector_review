@@ -1,20 +1,10 @@
-/*
+.body{padding-top:0px}
+
 .container-fluid{
-                margin-right:auto;
-                margin-left:auto;
-                margin-top:0px;
-                padding-top:15px;
-                padding-left:15px;
-                padding-right:15px
-                }
- */
-.container-fluid{
-                margin-top: 0px;
-                margin-bottom: 0px;
+
                 border: 0;
                 border-top: 0px solid #eee;
                 }
-
 
 /*
  * Override dc.js default styles for selection
