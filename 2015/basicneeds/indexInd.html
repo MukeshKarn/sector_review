@@ -98,7 +98,7 @@
                         <br>
                         <div class="dc-chart" id="count-info" data-step="12" data-intro="Click on this button to clear all the filters." data-position="right">
                         <strong><span class="filter-count " ></span></strong> selected out of <span class="total-count "></span> records</div>&nbsp;&nbsp;
-                        <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();">Reset All Filters</a>&nbsp;&nbsp;
+                        <a class="reset btn btn-primary btn-sm" id="reset" href="javascript:dc.filterAll();dc.redrawAll();changeContent();">Reset All Filters</a>&nbsp;&nbsp;
                         <a class="btn btn btn-info" href="#timelineid" >Highlight</a>&nbsp;&nbsp;
                         <a class="reset btn btn-primary btn-sm" href="monthSel.html" onclick="javascript:void window.open('monthSel.html','1418129557768','width=210,height=120,toolbar=0,menubar=0,location=0,status=0,scrollbars=0,resizable=1,left=800,top=300');return false;"> Report </a>&nbsp;&nbsp;
                          <a class="btn btn btn-success" href="javascript:void(0);" onclick="javascript:introJs().start();">Tutorial</a> <br >
@@ -108,57 +108,51 @@
             </div>
             <div class="row" >
                         <ul class="nav nav-tabs">
-                          <li class="active"><a href="#Overview" data-toggle="tab" aria-expanded="false">Sector Overview</a></li>
-                          <li class=""><a href="indexInd.html">View Per Indicator</a></li>
+                          <li class="active"><a href="#Overview" data-toggle="tab" aria-expanded="false">View Per Indicator</a></li>
+                          <li class=""><a href="index.html">Sector Overview</a></li>
                         </ul>            
             </div>
+			
             <div class="row" >
                 <div class="tab-pane fade active in" id="Overview">
+				<div class="row" style="background-color: #ffffff; color: #58595B">
+					<div class="col-md-4" data-step="1" data-intro="Select the indicator you want to analyse." data-position="right" style="vertical-align: text-top;">
+						<b>&nbsp; Indicator</b> <br>
+						<div id="indicatordrop">&nbsp;&nbsp;</div>						
+					</div>
+					<div class="col-md-2" data-step="2" data-intro="Select the area of operation." data-position="right">
+						<b>Area of operation</b> <br>
+						<div id="areadrop"> </div>
+					</div>
+					<div class="col-md-2" data-step="3" data-intro="Select the funding agency." data-position="right">
+						<b>Funding agency</b> <br>
+						<div id="fundeddrop"> </div>
+					</div>
+					<div class="col-md-2" data-step="4" data-intro="Select the Inter Agency Appeal" data-position="right">
+						<b>Appeal</b> <br>
+						<div id="appealdrop"> </div>
+					</div>
+					<div class="col-md-2" data-step="5" data-intro="Select the reporting month." data-position="right">
+						<b>Gender</b> <br>
+						<div id="genderdrop"> </div>
+					</div>
+					<br><br>
+					<hr>
+				</div>				
                     <div class="row">
                         <div class="col-md-3">
                             <div class="row">
                                 <center>
-                                    <div class="dc-chart" data-intro="Click on this row chart to filter by Activity." data-position="right" data-step="1" id="obj">
+                                    <div class="dc-chart" data-intro="Click on this row chart to filter by Activity." data-position="right" data-step="1" id="partner">
                                         <center>
-                                            <h5><strong>Output</strong><br ><small># of reports</small></h5>
+                                            <h5><strong>Partner</strong><br ><small># of HHs assisted</small></h5>
                                         </center>
                                     </div>
-                                </center>
-                            </div>
-                            <div class="row">
+                                </center>								
                                 <center>
-                                    <div class="dc-chart" data-intro="Click on this row chart to filter by Indicator." data-position="right" data-step="1" id="indicator">
+                                    <div class="dc-chart" data-intro="Click on this row chart to filter by Activity." data-position="right" data-step="1" id="funded">
                                         <center>
-                                            <h5><strong>Indicator</strong><br ><small># of assistance instance</small></h5>
-                                        </center>
-                                    </div>
-                                </center>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <center>
-                                        <div class="dc-chart" data-intro="Click on this pie chart to filter by Population Cohort." data-position="right" data-step="2" id="gender">
-                                            <center>
-                                                <h5><strong>Age Group & Gender</strong><br ><small># of assistance instance</small></h5>
-                                            </center>
-                                        </div>
-                                    </center>
-                                </div>
-                                <div class="col-md-6">
-                                    <center>
-                                        <div class="dc-chart" data-intro="Click on this pie chart to filter by Population Cohort." data-position="right" data-step="2" id="poptype">
-                                            <center>
-                                                <h5><strong>Population Type</strong><br ><small># of assistance instance</small></h5>
-                                            </center>
-                                        </div>
-                                    </center>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <center>
-                                    <div class="dc-chart" data-intro="Click on this row chart to filter by RRP6 status of the report." data-position="right" data-step="4" id="appeal">
-                                        <center>
-                                            <h5><strong>Inter Agency Appeal</strong><br ><small># of assistance instance</small></h5>
+                                            <h5><strong>Funding Agency</strong><br ><small># of assistance instance</small></h5>
                                         </center>
                                     </div>
                                 </center>
@@ -167,18 +161,18 @@
                         <div class="col-md-3">
                             <div class="row">
                                 <center>
-                                    <div class="dc-chart" data-intro="Click on this row chart to filter by Partner." data-position="right" data-step="5" id="partner">
+                                    <div class="dc-chart" data-intro="Click on this row chart to filter by Partner." data-position="right" data-step="5" id="poptype">
                                         <center>
-                                            <h5><strong>Partner</strong><br ><small># of HHs assisted</small></h5>
+                                            <h5><strong>Population Type</strong><br ><small># of assistance instance</small></h5>
                                         </center>
                                     </div>
                                 </center>
                             </div>
                             <div class="row">
                                 <center>
-                                    <div class="dc-chart" data-intro="Click on this row chart to filter by Site Type." data-position="right" data-step="6" id="allocation">
+                                    <div class="dc-chart" data-intro="Click on this row chart to filter by Site Type." data-position="right" data-step="6" id="gender">
                                         <center>
-                                            <h5><strong>Allocation according to Initial Plan</strong><br ><small># of assistance instance</small></h5>
+                                            <h5><strong>Age Group & Gender</strong><br ><small># of assistance instance</small></h5>
                                         </center>
                                     </div>
                                 </center>
@@ -188,17 +182,15 @@
                             <div class="row">
                                 <div class="col-md-6" >
                                     <center>
-                                        <div class="dc-chart" data-intro="Click on this pie chart to filter by Funding Agency." data-position="right" data-step="3" id="funded">
+                                        <div class="dc-chart" data-intro="Click on this pie chart to filter by Funding Agency." data-position="right" data-step="3" id="appeal">
                                             <center>
-                                                <h5><strong>Funding Agency</strong><br ><small># of assistance instance</small></h5>
+                                                <h5><strong>Inter Agency Appeal</strong><br ><small># of assistance instance</small></h5>
                                             </center>
                                         </div>
-                                        <div class="dc-chart" data-intro="Click on this pie chart to filter by Funding Agency." data-position="right" data-step="10" id="location">
+                                        <div class="dc-chart" data-intro="Click on this pie chart to filter by Funding Agency." data-position="right" data-step="10" id="allocation">
                                             <center>
-                                                <h5><strong>Top Locations </strong> <br> <small>Camps locations are not aggregated within Governorate</small></h5>
+                                                <h5><strong>Allocation according to Initial Plan</strong> <br> <small># of assistance instance</small></h5>
                                             </center>
-                                        </div>
-                                        <div class="dc-chart" data-intro="Click on this pie chart to filter by Funding Agency." data-position="right" data-step="11" id="obj">
                                         </div>
                                     </center>
                                 </div>
@@ -210,11 +202,15 @@
                                     </div>
                                 </div>
                             </div>
+
+                        </div>
+                    </div>
                             <div class="row">
                                     <center>
                                         <h5><strong>Monthly Progress</strong><br ><small># of assistance instance</small></h5>
                                     </center>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<center>
                             <script type="text/javascript">
                                     var d = new Date();
                                     var n = d.getMonth();
@@ -223,6 +219,7 @@
                                         document.write(monthNames[count] + "</a> &nbsp;");
                                         }
                             </script>
+							</center>
                             <br>
                                 <div class="col-md-12 dc-chart" data-intro="Click on this line chart to zoom in to specific Month." data-position="left" data-step="9" id="month">
 
@@ -236,9 +233,11 @@
                                         <h5><strong>Select Month Range Here</strong></h5>
                                     </center>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                            </div>	
+                            <div class="row">
+                                <div class="col-md-12 dc-chart" data-intro="Click on this bar chart to filter by Range of Month(s)." data-position="left" data-step="10" id="indicator">
+                                </div>
+                            </div>								
                     <div class="row" >
                         <div class="col-md-12">
                             <p><h2> &nbsp; </h2></p>
@@ -246,7 +245,7 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="PerIndicator">
-                    <p>This is the sector overview</p>
+
                  </div>
             </div>
             <div class="row" id="timelineid"style="background-color: #58595b; color: #ffffff">
@@ -272,6 +271,7 @@
             <script type="text/javascript" src="../../js/crossfilter.js"></script>
             <script type="text/javascript" src="../../js/dc.js"></script>
             <script type="text/javascript" src="../../js/d3.js"></script>
+            <script type="text/javascript" src="../../js/indicator.js"></script>			
             <script>
         // loading screen code
         $(window).load(function() {
@@ -310,8 +310,9 @@
                 var gender_chart = dc.pieChart("#gender");
                 var poptype_chart = dc.pieChart("#poptype");
                 var funded_chart = dc.rowChart("#funded");
-                var appeal_chart = dc.rowChart("#appeal");
-                var allocation_chart = dc.rowChart("#allocation");
+                //var appeal_chart = dc.rowChart("#appeal");
+				var appeal_chart = dc.pieChart("#appeal");
+                var allocation_chart = dc.pieChart("#allocation");
                 var partner_chart = dc.rowChart("#partner");
                 var month_chart = dc.lineChart("#month");
                 var monthrange_chart = dc.barChart("#monthrange");
@@ -384,7 +385,7 @@
                 var indicator = cf.indicator.group();
                 var indicatorByTotal = cf.indicator.group().reduceSum(function(d) {if (d.Units=="# of benef") {return d.Value;}else{return 0;}} );
                 //var indicatorByTotal = cf.indicator.group().reduceSum(function (d) { return d.Value;} );
-                   indicator_chart.width(400).height(250)
+                   indicator_chart.width(1).height(1)
                        .dimension(cf.indicator)
                        .group(indicatorByTotal)
                        .elasticX(true)
@@ -399,10 +400,10 @@
                 var gender = cf.gender.group();
                 var genderByTotal = cf.gender.group().reduceSum(function(d) {if (d.Units=="# of benef") {return d.Value;}else{return 0;}} );
                 //var genderByTotal = cf.gender.group().reduceSum(function (d) { return d.Value;} );
-                   gender_chart.width(100).height(100)
+                   gender_chart.width(160).height(160)
                        .dimension(cf.gender)
                        .group(genderByTotal)
-                       .innerRadius(10)
+                       .innerRadius(30)
                        .colors(['#8da0cb', /* boys */
                                '#fc8d62', /* girls */
                                '#e78ac3', /* men */
@@ -417,10 +418,14 @@
                 var poptype = cf.poptype.group();
                 var poptypeByTotal = cf.poptype.group().reduceSum(function(d) {if (d.Units=="# of benef") {return d.Value;}else{return 0;}} );
                 //var poptypeByTotal = cf.poptype.group().reduceSum(function (d) { return d.Value;} );
-                   poptype_chart.width(100).height(100)
+                   poptype_chart.width(160).height(160)
                        .dimension(cf.poptype)
                        .group(poptypeByTotal)
-                       .innerRadius(10)
+                       .innerRadius(30)
+                       .colors(['#58595B', /* Camp */
+                               '#AAAAAA', /* Urban */
+                               '#DDDDDD', /* Host Community*/							   
+                               ])
                        .colorDomain([0,4])
                        .renderLabel(true)
                        .colorAccessor(function(d, i){return i%4;})
@@ -430,7 +435,7 @@
                 var funded = cf.funded.group();
                 var fundedByTotal = cf.funded.group().reduceSum(function(d) {if (d.Units=="# of benef") {return d.Value;}else{return 0;}} );
                 //var fundedByTotal = cf.funded.group().reduceSum(function (d) { return d.Value;} );
-                   funded_chart.width(400).height(175)
+                   funded_chart.width(400).height(130)
                        .dimension(cf.funded)
                        .group(fundedByTotal)
                        .elasticX(true)
@@ -475,44 +480,60 @@
                 var appeal = cf.appeal.group();
                 var appealByTotal = cf.appeal.group().reduceSum(function(d) {if (d.Units=="# of benef") {return d.Value;}else{return 0;}} );
                 //var appealByTotal = cf.appeal.group().reduceSum(function (d) { return d.Value;} );
-                   appeal_chart.width(400).height(130)
+                   appeal_chart.width(160).height(160)
                        .dimension(cf.appeal)
                        .group(appealByTotal)
-                       .elasticX(true)
-                       .on("filtered", getFiltersValues)
-                       .data(function(group) { return group.top(100); })
-                       .colors(['#58595b'])
-                       .colorDomain([0,0])
-                       .colorAccessor(function(d, i){return 1;})
-                       .xAxis().ticks(4).tickFormat(d3.format("s"));
+                       .innerRadius(30)
+                       .colors(['#58595B', /* Direct Appeal */
+                               '#AAAAAA', /* Indirect Appeal */
+                               '#DDDDDD', /* Outside 3RP */
+                               ])
+                       .colorDomain([0,4])
+                       .renderLabel(true)
+                       .colorAccessor(function(d, i){return i%4;})
+                       .on("filtered", getFiltersValues);
 
+					   
                 cf.allocation = cf.dimension(function(d) { return d.allocation; });
                 var allocation = cf.allocation.group();
                 var allocationByTotal = cf.allocation.group().reduceSum(function(d) {if (d.Units=="# of benef") {return d.Value;}else{return 0;}} );
                 //var allocationByTotal = cf.allocation.group().reduceSum(function (d) { return d.Value;} );
-                   allocation_chart.width(400).height(90)
-                       .dimension(cf.allocation)
+                   allocation_chart.width(160).height(160)
+				       .dimension(cf.allocation)
                        .group(allocationByTotal)
-                       .elasticX(true)
-                       .on("filtered", getFiltersValues)
-                       .data(function(group) { return group.top(100); })
-                       .colors(['#58595b'])
-                       .colorDomain([0,0])
-                       .colorAccessor(function(d, i){return 1;})
-                       .xAxis().ticks(4).tickFormat(d3.format("s"));
+                       .innerRadius(30)
+                       .colors(['#58595B', /* Yes */
+                               '#AAAAAA', /* No */
+                               ])
+                       .colorDomain([0,4])
+                       .renderLabel(true)
+                       .colorAccessor(function(d, i){return i%4;})
+                       .on("filtered", getFiltersValues);
+
+
 
 
 
                 cf.partner = cf.dimension(function(d) { return d.Partner; });
                 var partner = cf.partner.group();
+			var sele = document.getElementById('indicatordropdown');
+			if ((sele.options[sele.selectedIndex].value =="All") || (sele.options[sele.selectedIndex].value =="# of FHH assisted") || (sele.options[sele.selectedIndex].value =="# of MHH assisted"))
+			{
                 var partnerByTotal = cf.partner.group().reduceSum(function(d) {if (d.Units=="# of case") {return d.Value;}else{return 0;}} );
-                //var partnerByTotal = cf.partner.group().reduceSum(function (d) { return d.Value;} );
-                   partner_chart.width(400).height(570)
+			}
+			else
+			{
+				var partnerByTotal = cf.partner.group().reduceSum(function (d) { return d.Value;} );
+			}
+				
+
+                //
+                   partner_chart.width(400).height(200)
                        .dimension(cf.partner)
                        .group(partnerByTotal)
                        .elasticX(true)
                        .on("filtered", getFiltersValues)
-                       .data(function(group) { return group.top(200); })
+                       .data(function(group) { return group.top(5); })
                        .colors(['#58595b'])
                        .colorDomain([0,0])
                        .colorAccessor(function(d, i){return 1;})
@@ -527,7 +548,7 @@
                 var men=cf.month.group().reduceSum(function(d) {if ((d.Gender=="Men") && (d.Units=="# of benef")) {return d.Value;}else{return 0;}});
                 var women=cf.month.group().reduceSum(function(d) {if ((d.Gender=="Women") && (d.Units=="# of benef")) {return d.Value;}else{return 0;}});
 
-                   month_chart.width(900).height(230)
+                   month_chart.width(1250).height(230)
                        .transitionDuration(1000)
                        .margins({top: 30, right: 50, bottom: 25, left: 60})
                        .dimension(cf.month)
@@ -535,9 +556,9 @@
                        .rangeChart(monthrange_chart)
                        .x(d3.time.scale().domain([new Date(2015, 0, 1), new Date(2015, 11, 31)]))
                        .xUnits(d3.time.months)
-        //.elasticY(true)
+						//.elasticY(true)
                        .renderHorizontalGridLines(true)
-                       .legend(dc.legend().x(700).y(10).itemHeight(13).gap(5))
+                       .legend(dc.legend().x(1150).y(10).itemHeight(13).gap(5))
                        .brushOn(false)
                         .group(boys, 'Boys')
                         .stack(girls, 'Girls')
@@ -547,7 +568,7 @@
 
 
 
-                   monthrange_chart.width(900)
+                   monthrange_chart.width(1250)
                        .height(40)
                        .margins({top: 0, right: 50, bottom: 20, left: 60})
                        .dimension(cf.month)
