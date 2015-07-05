@@ -113,6 +113,7 @@ dropDowngen.property("value", "All");
 							dc.renderAll();	
 			}
 			else{
+			
 							indicator_chart.filterAll();
 							indicator_chart.filter(sel.options[sel.selectedIndex].value);
 							dc.redrawAll();					

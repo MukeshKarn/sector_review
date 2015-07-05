@@ -209,8 +209,18 @@
                                     <center>
                                         <h5><strong>Monthly Progress</strong><br ><small># of assistance instance</small></h5>
                                     </center>
-
-
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<center>
+                            <script type="text/javascript">
+                                    var d = new Date();
+                                    var n = d.getMonth();
+                                        for(count = 0; count < n; count++){
+                                        document.write('<a id="reset" class="reset btn btn-primary btn-sm" href="javascript:dc.filterAll(); monthrange_chart.filter([new Date(2015,' + count + ', 1), new Date(2015, ' + count + ', 31)]); dc.redrawAll();">');
+                                        document.write(monthNames[count] + "</a> &nbsp;");
+                                        }
+                            </script>
+							</center>
+                            <br>
                                 <div class="col-md-12 dc-chart" data-intro="Click on this line chart to zoom in to specific Month." data-position="left" data-step="9" id="month">
 
 
@@ -650,12 +660,11 @@
                 {
                 dc.filterAll(); location_chart.filter("ZaatariCamp");  dc.renderAll();
                 }
-				/*
                 var d = new Date();
                 var n = d.getMonth();
                 dc.filterAll();
                  monthrange_chart.filter([new Date(2015, n-1, 1), new Date(2015, n-1, 31)]);
-                dc.redrawAll();*/
+                dc.redrawAll();
                 });
 
             </script>
