@@ -83,6 +83,23 @@ var dropDowngen = d3.select("#genderdrop").append("select")
                     .attr("id", "genderdropdown")
 					.attr("style","width:150px")
 					.attr("onChange","change('Gen')");
+					
+
+var dropDownast = d3.select("#assisteddrop").append("select")
+                    .attr("id", "assisteddropdown")
+					.attr("style","width:200px")
+					.attr("onChange","change('Ast')");	
+var sortast = (d3.map(data, function(d){return d.Units;}).keys()).sort(d3.ascending);						
+var optionsast = dropDownast.selectAll("option")
+//			.data(d3.map(data, function(d){return d.Governorate;}).keys())
+			.data(sortast)
+			.enter()
+			.append("option");
+optionsast.text(function (d) {if (d == "# of benef") {return "Assistance Instance"; } else if (d == "# of case"){return "Assisted Households";} else {return d;} })
+       .attr("value", function (d) { return d; });
+dropDownast.property("value", "All");	   
+
+					
 
 var sortgen = (d3.map(data, function(d){return d.Gender;}).keys()).sort(d3.ascending);											
 var optionsgen = dropDowngen.selectAll("option")
@@ -105,17 +122,58 @@ dropDowngen.property("value", "All");
 		   
 					   
 			var sel = document.getElementById('indicatordropdown');
+			var sel1 = document.getElementById('assisteddropdown');
 			
 			if (sel.options[sel.selectedIndex].value =="All")
 			{
 							indicator_chart.filterAll();
 							dc.redrawAll();					
 							dc.renderAll();	
+
+						if (sel1.options[sel1.selectedIndex].value =="# of benef")
+
+							{ $(".assistText").html("# of assistance instance");}
+							
+						else if (sel1.options[sel1.selectedIndex].value =="All")
+						{ $(".assistText").html("# of HHs assisted/ assistance instance");}
+						
+						else
+							{ 
+							$(".assistText").html("# of HHs assisted");
+							//document.getElementById('assistText').innerHTML = '# of HHs assisted'; 
+							}
+										
 							
 
 								
 			}
+			else if ((sel.options[sel.selectedIndex].value !=="All") && (sel1.options[sel1.selectedIndex].value !=="All"))
+			{
+			
+							$(indicator_chart).empty();
+							indicator_chart.filterAll();
+							indicator_chart.filter(sel.options[sel.selectedIndex].value);
+							dc.redrawAll();					
+							dc.renderAll();
+							
+							
+						if (sel1.options[sel1.selectedIndex].value =="# of benef")
+
+							{ $(".assistText").html("# of assistance instance");}
+						else
+							{ 
+							$(".assistText").html("# of HHs assisted");
+							//document.getElementById('assistText').innerHTML = '# of HHs assisted'; 
+							}			
+			
+			}
 			else{
+			
+					if ((sel.options[sel.selectedIndex].value =="# of FHH assisted") || (sel.options[sel.selectedIndex].value =="# of MHH assisted") || (sel.options[sel.selectedIndex].value =="# of FHH receiving seasonal assistance") || (sel.options[sel.selectedIndex].value =="# of MHH receiving seasonal assistance"))
+					{$(".assistText").html("# of HHs assisted");}
+					else
+					{ $(".assistText").html("# of assistance instance");}
+			
 							$(indicator_chart).empty();
 							indicator_chart.filterAll();
 							indicator_chart.filter(sel.options[sel.selectedIndex].value);
@@ -177,6 +235,55 @@ dropDowngen.property("value", "All");
 			}
 	}	
 
+	
+	if (nm == "Ast")
+	{
+			var sel = document.getElementById('assisteddropdown');
+			var sel1 = document.getElementById('indicatordropdown');
+			//alert (sel.options[sel.selectedIndex].value);
+
+			if ((sel.options[sel.selectedIndex].value =="All") && ((sel1.options[sel1.selectedIndex].value =="# of FHH assisted") || (sel1.options[sel1.selectedIndex].value =="# of MHH assisted") || (sel1.options[sel1.selectedIndex].value =="# of FHH receiving seasonal assistance") || (sel1.options[sel1.selectedIndex].value =="# of MHH receiving seasonal assistance")))
+
+			{
+							assist_chart.filterAll();
+							dc.redrawAll();					
+							dc.renderAll();			
+							$(".assistText").html("# of HHs assisted");
+			
+			}
+
+			
+			else if (sel.options[sel.selectedIndex].value =="All")
+			{
+							assist_chart.filterAll();
+							dc.redrawAll();					
+							dc.renderAll();	
+							//document.getElementById('assistText').innerHTML = '# of HHs assisted/ assistance instance';		
+							$(".assistText").html("# of HHs assisted/ assistance instance");
+			}
+			
+			
+			else{
+					
+						if (sel.options[sel.selectedIndex].value =="# of benef")
+
+							{ $(".assistText").html("# of assistance instance");}
+						else
+							{ 
+							$(".assistText").html("# of HHs assisted");
+							//document.getElementById('assistText').innerHTML = '# of HHs assisted'; 
+							}
+			
+							assist_chart.filterAll();
+							assist_chart.filter(sel.options[sel.selectedIndex].value);
+							dc.redrawAll();					
+							dc.renderAll();
+			}
+			
+			
+	}
+
+	
 	if (nm == "Fb")
 	{
 			var sel = document.getElementById('fundedbydropdown');

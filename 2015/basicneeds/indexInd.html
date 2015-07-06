@@ -73,8 +73,7 @@
                         The data presented here is collected through the <a href="https://www.syrianrefugeeresponse.org/" target="_blank">Syrian Refugee Response</a> platform and then cleared by Sector focal points.
                         You can donwload the <a href="data.csv" target="_blank">data here</a>. More info on Jordan <a href="http://data.unhcr.org/jordan" target="_blank">here</a>.<br />
                         <strong>The following charts show the achievements of Basic Needs sector. Click on any of the graphs below to filter and slice the data.</strong>
-
-                        <p>The units displayed here correspond to "Assistance Instance". As such totals presented here should be analysed accordingly. </p>
+					<p> </p>
                 </div>
                 <div class="col-md-4">
                     <div class="row" >
@@ -115,26 +114,30 @@
 			
             <div class="row" >
                 <div class="tab-pane fade active in" id="Overview">
-				<div class="row" style="background-color: #ffffff; color: #58595B">
-					<div class="col-md-4" data-step="1" data-intro="Select the indicator you want to analyse." data-position="right" style="vertical-align: text-top;">
-						<b>&nbsp; Indicator</b> <br>
-						<div id="indicatordrop">&nbsp;&nbsp;</div>						
+				<div style="background-color: #ffffff; color: #58595B; width:100%;white-space:nowrap">
+					<div  data-step="1" data-intro="Select the indicator you want to analyse." data-position="right" style="width:31%;display:inline-block">
+						<b>&nbsp; Indicator</b>
+						<div id="indicatordrop">&nbsp;</div>						
 					</div>
-					<div class="col-md-2" data-step="2" data-intro="Select the area of operation." data-position="right">
-						<b>Area of operation</b> <br>
-						<div id="areadrop"> </div>
+					<div data-step="2" data-intro="Select the reporting month." data-position="right" style="width:15%;display:inline-block">
+						<b>&nbsp; Assistance HHs/ Instance</b>
+						<div id="assisteddrop">&nbsp;</div>
+					</div>					
+					<div data-step="3" data-intro="Select the area of operation." data-position="right" style="width:15%;display:inline-block">
+						<b>&nbsp; Area of operation</b> 
+						<div id="areadrop">&nbsp;</div>
 					</div>
-					<div class="col-md-2" data-step="3" data-intro="Select the funding agency." data-position="right">
-						<b>Funding agency</b> <br>
-						<div id="fundeddrop"> </div>
+					<div data-step="4" data-intro="Select the funding agency." data-position="right" style="width:15%;display:inline-block">
+						<b>&nbsp; Funding agency</b> 
+						<div id="fundeddrop">&nbsp;</div>
 					</div>
-					<div class="col-md-2" data-step="4" data-intro="Select the Inter Agency Appeal" data-position="right">
-						<b>Appeal</b> <br>
-						<div id="appealdrop"> </div>
+					<div data-step="5" data-intro="Select the Inter Agency Appeal" data-position="right" style="width:13%;display:inline-block">
+						<b>&nbsp; Appeal</b> 
+						<div id="appealdrop">&nbsp;</div>
 					</div>
-					<div class="col-md-2" data-step="5" data-intro="Select the reporting month." data-position="right">
-						<b>Gender</b> <br>
-						<div id="genderdrop"> </div>
+					<div data-step="6" data-intro="Select the reporting month." data-position="right" style="width:10%;display:inline-block">
+						<b>&nbsp; Gender</b> 
+						<div id="genderdrop">&nbsp;</div>
 					</div>
 					<br><br>
 					<hr>
@@ -145,14 +148,14 @@
                                 <center>
                                     <div class="dc-chart" data-intro="Click on this row chart to filter by Activity." data-position="right" data-step="1" id="partner">
                                         <center>
-                                            <h5><strong>Partner</strong><br ><small># of HHs assisted</small></h5>
+                                            <h5><strong>Partner</strong><br ><small><div class="assistText"> # of HHs assisted/ assistance instance </div></small></h5>
                                         </center>
                                     </div>
                                 </center>								
                                 <center>
                                     <div class="dc-chart" data-intro="Click on this row chart to filter by Activity." data-position="right" data-step="1" id="funded">
                                         <center>
-                                            <h5><strong>Funding Agency</strong><br ><small># of assistance instance</small></h5>
+                                            <h5><strong>Funding Agency</strong><br ><small><div class="assistText"> # of HHs assisted/ assistance instance </div></small></h5>
                                         </center>
                                     </div>
                                 </center>
@@ -163,7 +166,7 @@
                                 <center>
                                     <div class="dc-chart" data-intro="Click on this row chart to filter by Partner." data-position="right" data-step="5" id="poptype">
                                         <center>
-                                            <h5><strong>Population Type</strong><br ><small># of assistance instance</small></h5>
+                                            <h5><strong>Population Type</strong><br ><small><div class="assistText"> # of HHs assisted/ assistance instance </div></small></h5>
                                         </center>
                                     </div>
                                 </center>
@@ -172,7 +175,7 @@
                                 <center>
                                     <div class="dc-chart" data-intro="Click on this row chart to filter by Site Type." data-position="right" data-step="6" id="gender">
                                         <center>
-                                            <h5><strong>Age Group & Gender</strong><br ><small># of assistance instance</small></h5>
+                                            <h5><strong>Age Group & Gender</strong><br ><small><div class="assistText"> # of HHs assisted/ assistance instance </div></small></h5>
                                         </center>
                                     </div>
                                 </center>
@@ -184,12 +187,12 @@
                                     <center>
                                         <div class="dc-chart" data-intro="Click on this pie chart to filter by Funding Agency." data-position="right" data-step="3" id="appeal">
                                             <center>
-                                                <h5><strong>Inter Agency Appeal</strong><br ><small># of assistance instance</small></h5>
+                                                <h5><strong>Inter Agency Appeal</strong><br ><small><div class="assistText"> # of HHs assisted/ assistance instance </div></small></h5>
                                             </center>
                                         </div>
                                         <div class="dc-chart" data-intro="Click on this pie chart to filter by Funding Agency." data-position="right" data-step="10" id="allocation">
                                             <center>
-                                                <h5><strong>Allocation according to Initial Plan</strong> <br> <small># of assistance instance</small></h5>
+                                                <h5><strong>Allocation according to Initial Plan</strong> <br> <small><div class="assistText"> # of HHs assisted/ assistance instance </div></small></h5>
                                             </center>
                                         </div>
                                     </center>
@@ -207,7 +210,7 @@
                     </div>
                             <div class="row">
                                     <center>
-                                        <h5><strong>Monthly Progress</strong><br ><small># of assistance instance</small></h5>
+                                        <h5><strong>Monthly Progress</strong><br ><small><div class="assistText"> # of HHs assisted/ assistance instance </div></small></h5>
                                     </center>
 
 
@@ -230,6 +233,7 @@
                             </div>								
                     <div class="row" >
                         <div class="col-md-12">
+						<div id="assist"></div>
                             <p><h2> &nbsp; </h2></p>
                         </div>
                     </div>
@@ -261,7 +265,7 @@
             <script type="text/javascript" src="../../js/crossfilter.js"></script>
             <script type="text/javascript" src="../../js/dc.js"></script>
             <script type="text/javascript" src="../../js/d3.js"></script>
-            <script type="text/javascript" src="../../js/indicator.js"></script>			
+		
             <script>
         // loading screen code
         $(window).load(function() {
@@ -308,6 +312,7 @@
                 var monthrange_chart = dc.barChart("#monthrange");
                 var location_chart = dc.rowChart("#location");
                 var obj_chart = dc.rowChart("#obj");
+				var assist_chart = dc.rowChart("#assist");
                 var region_chart = dc.bubbleOverlay("#region").svg(d3.select("#region svg"));
 
                 function getFiltersValues() {
@@ -373,7 +378,7 @@
 
                 cf.indicator = cf.dimension(function(d) { return d.Indicator; });
                 var indicator = cf.indicator.group();
-                var indicatorByTotal = cf.indicator.group().reduceSum(function(d) {if (d.Units=="# of benef") {return d.Value;}else{return 0;}} );
+                var indicatorByTotal = cf.indicator.group().reduceSum(function(d) { return d.Value; } );
                 //var indicatorByTotal = cf.indicator.group().reduceSum(function (d) { return d.Value;} );
                    indicator_chart.width(1).height(1)
                        .dimension(cf.indicator)
@@ -388,7 +393,7 @@
 
                 cf.gender = cf.dimension(function(d) { return d.Gender; });
                 var gender = cf.gender.group();
-                var genderByTotal = cf.gender.group().reduceSum(function(d) {if (d.Units=="# of benef") {return d.Value;}else{return 0;}} );
+                var genderByTotal = cf.gender.group().reduceSum(function(d) { return d.Value; } );
                 //var genderByTotal = cf.gender.group().reduceSum(function (d) { return d.Value;} );
                    gender_chart.width(160).height(160)
                        .dimension(cf.gender)
@@ -406,7 +411,7 @@
 
                 cf.poptype = cf.dimension(function(d) { return d.poptype; });
                 var poptype = cf.poptype.group();
-                var poptypeByTotal = cf.poptype.group().reduceSum(function(d) {if (d.Units=="# of benef") {return d.Value;}else{return 0;}} );
+                var poptypeByTotal = cf.poptype.group().reduceSum(function(d) { return d.Value; } );
                 //var poptypeByTotal = cf.poptype.group().reduceSum(function (d) { return d.Value;} );
                    poptype_chart.width(160).height(160)
                        .dimension(cf.poptype)
@@ -423,7 +428,7 @@
 
                 cf.funded = cf.dimension(function(d) { return d.Fundedby; });
                 var funded = cf.funded.group();
-                var fundedByTotal = cf.funded.group().reduceSum(function(d) {if (d.Units=="# of benef") {return d.Value;}else{return 0;}} );
+                var fundedByTotal = cf.funded.group().reduceSum(function(d) { return d.Value; } );
                 //var fundedByTotal = cf.funded.group().reduceSum(function (d) { return d.Value;} );
                    funded_chart.width(400).height(130)
                        .dimension(cf.funded)
@@ -438,7 +443,7 @@
 
                 cf.location = cf.dimension(function(d) { return d.Governorate; });
                 var location = cf.location.group();
-                var locationByTotal = cf.location.group().reduceSum(function(d) {if (d.Units=="# of benef") {return d.Value;}else{return 0;}} );
+                var locationByTotal = cf.location.group().reduceSum(function(d) { return d.Value; } );
                 //var locationByTotal = cf.location.group().reduceSum(function (d) { return d.Value;} );
                    location_chart.width(400).height(175)
                        .dimension(cf.location)
@@ -466,9 +471,24 @@
                        .xAxis().ticks(4).tickFormat(d3.format("s"));
 
 
+                cf.assist = cf.dimension(function(d) { return d.Units; });
+                var assist = cf.assist.group();
+                var assistByTotal = cf.assist.group().reduceCount();
+                   assist_chart.width(5).height(5)
+                       .dimension(cf.assist)
+                       .group(assistByTotal)
+                       .elasticX(false)
+                       .on("filtered", getFiltersValues)
+                       .data(function(group) { return group.top(4); })
+                       .colors(['#58595b'])
+                       .colorDomain([0,0])
+                       .colorAccessor(function(d, i){return 1;})
+                       .xAxis().ticks(4).tickFormat(d3.format("s"));
+					   
+					   
                 cf.appeal = cf.dimension(function(d) { return d.appeal; });
                 var appeal = cf.appeal.group();
-                var appealByTotal = cf.appeal.group().reduceSum(function(d) {if (d.Units=="# of benef") {return d.Value;}else{return 0;}} );
+                var appealByTotal = cf.appeal.group().reduceSum(function(d) { return d.Value; } );
                 //var appealByTotal = cf.appeal.group().reduceSum(function (d) { return d.Value;} );
                    appeal_chart.width(160).height(160)
                        .dimension(cf.appeal)
@@ -486,7 +506,7 @@
 					   
                 cf.allocation = cf.dimension(function(d) { return d.allocation; });
                 var allocation = cf.allocation.group();
-                var allocationByTotal = cf.allocation.group().reduceSum(function(d) {if (d.Units=="# of benef") {return d.Value;}else{return 0;}} );
+                var allocationByTotal = cf.allocation.group().reduceSum(function(d) { return d.Value; } );
                 //var allocationByTotal = cf.allocation.group().reduceSum(function (d) { return d.Value;} );
                    allocation_chart.width(160).height(160)
 				       .dimension(cf.allocation)
@@ -503,17 +523,10 @@
 
                 cf.partner = cf.dimension(function(d) { return d.Partner; });
                 var partner = cf.partner.group();
-			var sele = document.getElementById('indicatordropdown');
-			if ((sele.options[sele.selectedIndex].value =="All") || (sele.options[sele.selectedIndex].value =="# of FHH assisted") || (sele.options[sele.selectedIndex].value =="# of MHH assisted"))
-			{
-                var partnerByTotal = cf.partner.group().reduceSum(function(d) {if (d.Units=="# of case") {return d.Value;}else{return 0;}} );
-			}
-			else
-			{
-			var partnerByTotal = cf.partner.group().reduceSum(function(d) {if (d.Units=="# of benef") {return d.Value;}else{return 0;}} );
-			}
+				var partnerByTotal = cf.partner.group().reduceSum(function(d) { return d.Value; } );
 				
 
+	
                 //
                    partner_chart.width(400).height(200)
                        .dimension(cf.partner)
@@ -528,12 +541,12 @@
 
                 cf.month = cf.dimension(function (d) {return d.dd;});
                 var month = cf.month.group();
-                var monthByTotal = cf.month.group().reduceSum(function(d) {if (d.Units=="# of benef") {return d.Value;}else{return 0;}} );
+                var monthByTotal = cf.month.group().reduceSum(function(d) { return d.Value; } );
                 //var monthByTotal = cf.month.group().reduceSum(function (d) { return d.Value;} );
-                var boys=cf.month.group().reduceSum(function(d) {if ((d.Gender=="Boys") && (d.Units=="# of benef")) {return d.Value;}else{return 0;}});
-                var girls=cf.month.group().reduceSum(function(d) {if ((d.Gender=="Girls") && (d.Units=="# of benef")) {return d.Value;}else{return 0;}});
-                var men=cf.month.group().reduceSum(function(d) {if ((d.Gender=="Men") && (d.Units=="# of benef")) {return d.Value;}else{return 0;}});
-                var women=cf.month.group().reduceSum(function(d) {if ((d.Gender=="Women") && (d.Units=="# of benef")) {return d.Value;}else{return 0;}});
+                var boys=cf.month.group().reduceSum(function(d) {if (d.Gender=="Boys") {return d.Value;}else{return 0;}});
+                var girls=cf.month.group().reduceSum(function(d) {if (d.Gender=="Girls") {return d.Value;}else{return 0;}});
+                var men=cf.month.group().reduceSum(function(d) {if (d.Gender=="Men") {return d.Value;}else{return 0;}});
+                var women=cf.month.group().reduceSum(function(d) {if (d.Gender=="Women") {return d.Value;}else{return 0;}});
 
                    month_chart.width(1250).height(230)
                        .transitionDuration(1000)
@@ -659,6 +672,7 @@
                 });
 
             </script>
+            <script type="text/javascript" src="../../js/indicatorBN.js"></script>				
             <div class="d3-tip" style="box-sizing: border-box; position: absolute; display: none">&nbsp;</div>
             <div class="d3-tip" style="box-sizing: border-box; position: absolute; display: none">&nbsp;</div>
             <div class="d3-tip" style="box-sizing: border-box; position: absolute; display: none">&nbsp;</div>
